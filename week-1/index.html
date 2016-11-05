@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <!--
+       The MIT License (MIT)
+
+       Copyright (c) 2015 Tom Panning
+
+       Permission is hereby granted, free of charge, to any person obtaining a copy
+       of this software and associated documentation files (the "Software"), to deal
+       in the Software without restriction, including without limitation the rights
+       to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+       copies of the Software, and to permit persons to whom the Software is
+       furnished to do so, subject to the following conditions:
+
+       The above copyright notice and this permission notice shall be included in
+       all copies or substantial portions of the Software.
+
+       THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+       IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+       FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+       AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+       LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+       OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+       THE SOFTWARE.
+     -->
+  <head>
+    <meta charset="utf-8">
+
+    <style> .shell { color:aqua; } </style>
+    <title>
+      Introduction to Linux, shell, and git.
+    </title>
+    <meta name="author" content="Edgar Aroutiounian">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet"
+    href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.min.css">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/moon.css"
+    id="theme">
+
+    <!-- href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/black.css" -->
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet"
+    href="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+     var link = document.createElement('link');
+     link.rel = 'stylesheet';
+     link.type = 'text/css';
+     link.href = window.location.search.match(/print-pdf/gi)
+	      ?  'http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css'
+	       : 'http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/paper.css';
+     document.getElementsByTagName('head')[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+	<section data-markdown>
+	  <script type="text/template">
+# Introduction to Linux, shell, git.
+
+## Edgar Aroutiounian
+---------------------
+#### ISTC backend development course, Week-1, Fall 2016
+#### Yerevan, Armenia	   
+	  </script>
+	</section>
+
+	<section data-markdown>
+	  <script type="text/template">
+## _Operating Systems_
+-------------------
+Operating systems are what control our computers, you might know a few
+by name like _Windows_, _OS X_, and _Linux_
+
+We're going to be working with Linux, specifically Ubuntu inside of 
+VirtualBox running on Windows.
+
+Operating systems control our computers, they ultimately control 
+the hardware, that is the physical parts of the computer and they
+control what instruction, (command), the CPU execs.
+	  </script>
+	</section>
+
+	<section data-markdown>
+	  <script type="text/template">
+## _Why Linux (Ubuntu)?_
+------------------------
+
+We are learning Linux because
+
+1. If you're going to be a serious programmer, then you need to know it.
+
+2. Over 95% of all servers are running Linux, basically every website,
+   every "cloud" service.
+
+3. It is fundamental, the foundation of open source software
+
+4. If you start a company, you will need a backend, those backends run Linux.
+
+	  </script>
+	</section>
+
+	<section data-markdown>
+	  <script type="text/template">
+### _Goals of the course_?
+--------------------------------------------------
+
+1. ...be comfortable with _Linux_
+
+2. ...understand _git_ since most tools and code are distributed via _git_
+
+3. ...know modern `JavaScript` _deeply_
+
+4. ...create projects from scratch on your own
+
+5. ...understand `nodejs`, `async` programming
+
+	  </script>
+	</section>
+
+	<section data-markdown>
+	  <script type="text/template">
+### _Starting with the shell_
+-----------------------------
+
+The `shell` is the primary way we'll communicate with 
+the Operating System. Shell, terminal, bash, and command line 
+all basically mean the same thing in this course.
+
+
+	  </script>
+	</section>
+
+	<section data-markdown>
+	  <script type="text/template">
+### _git_
+---------
+When we work on software we need a way to track the code, 
+a way to change it carefully and be able to work on a team, aka 
+other programmers. This kind of tool is called version control.
+
+There a few well known version control tools, some famous ones:
+
+1. `git`
+2. `hg`
+3. `darcs`
+4. `cvs`
+5. `svn`
+
+We will use (1), `git`.
+
+	  </script>
+	</section>
+
+	<section data-markdown>
+	  <script type="text/template">
+### _git_
+---------
+We will do our work on [github](http://github.com)
+Github is a business built on top of github, it is free to 
+have an account there. Everyone must have an account on `github`.
+
+We use git to make `commits`, a good commit should be self contained
+and have a good commit message. A good commit message is in the present 
+tense and describes what work is in the commit.
+
+
+	  </script>
+	</section>
+
+	<section data-markdown>
+	  <script type="text/template">
+ ### _slide_
+	  </script>
+	</section>
+
+	<section data-markdown>
+	  <!-- Example, show Turkish bank cert -->
+	  <script type="text/template">
+### _and the interesting things you find in apps..._
+----------------------------------------------------
+
+Developers are human and human are usually a bit lazy
+
+People leave in their apps, both in the binary and in the `IPA`
+all kinds of goodies like `AWS` passwords, entire `.git` repos 
+and even `TLS` certs which can be converted into `ssh` keys...
+
+	  </script>
+	</section>
+	<section data-markdown>
+	  <script type="text/template">
+### _Wrapping up_
+----------------
+
+Shameless plug: I'm trying to establish a hackerspace in Yerevan, 
+see the presentation at http://hyegar.com/hackerspace
+a place of learning all kinds of skills.
+
+# Any questions?
+	  </script>
+	</section>
+
+
+      </div>
+    </div>
+
+    <script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.min.js"></script>
+
+    <script>
+     // Full list of configuration options available at:
+     // https://github.com/hakimel/reveal.js#configuration
+     Reveal.initialize({
+       controls: true,
+       progress: true,
+       history: true,
+       center: true,
+       transitionSpeed:'slow',
+       previewLinks:true,
+       transition: 'convex', // none/fade/slide/convex/concave/zoom
+       // Optional reveal.js plugins
+       dependencies: [
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js',
+	   condition: function() { return !document.body.classList; } },
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js',
+	   condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js',
+	   condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/highlight/highlight.js',
+	   async: true,
+	   condition: function() { return !!document.querySelector( 'pre code' ); },
+	   callback: function() { hljs.initHighlightingOnLoad(); } },
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true },
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true }
+       ]
+     });
+    </script>
+  </body>
+</html>
